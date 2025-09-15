@@ -255,11 +255,14 @@ footer {
   }
 
   .summary h1 {
+    font-size: 0.9rem;
+    line-height: 1.4;
     white-space: normal;        /* allow wrapping so it never spills out */
     width: auto;                /* let text use available width */
     border-right: none;         /* remove the “cursor” on small screens */
-    animation: none;            /* stop typing effect to avoid overflow */
+            /* stop typing effect to avoid overflow */
   }
+
 
   .links {
     gap: 1rem;                     /* smaller space between menu links */
