@@ -255,14 +255,18 @@ footer {
   }
 
   .summary h1 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.4;
     white-space: normal;        /* allow wrapping so it never spills out */
     width: auto;                /* let text use available width */
     border-right: none;         /* remove the “cursor” on small screens */
             /* stop typing effect to avoid overflow */
   }
+  
+  .summary p{
+    font-size: 0.7rem;
 
+  }
 
   .links {
     gap: 1rem;                     /* smaller space between menu links */
@@ -278,6 +282,19 @@ footer {
     flex-direction: row;      /* force horizontal bar */
     justify-content: center;  /* center the links inside */
     padding: 2vh 2vw;
+  }
+    .summary h1 {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    white-space: normal;        /* allow wrapping so it never spills out */
+    width: auto;                /* let text use available width */
+    border-right: none;         /* remove the “cursor” on small screens */
+            /* stop typing effect to avoid overflow */
+  }
+
+  .summary p{
+    font-size: 0.5rem;
+
   }
 
 
