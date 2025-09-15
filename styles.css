@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   list-style: none; /* removes bullet points*/
-  gap: 25vw;
+  gap: 5vw;
 }
 .links li {
   display: inline-block;
@@ -238,15 +238,20 @@ footer {
     align-items: center;
     text-align: center;
     padding: 2vh 2vw;
+    gap: 2rem;
   }
    .pic {
     margin: 0 auto 2rem;        /* center the picture and add space below */
   }
 
   .pic img {
-    width: 60vw;                /* scale image down for mobile */
+    width: 35vw;                /* scale image down for mobile */
     height: auto;               /* keep aspect ratio */
     margin: 0 auto;
+  }
+  
+  #info .summary{
+    text-align: left;
   }
 
   .summary h1 {
