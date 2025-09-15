@@ -227,6 +227,23 @@ footer {
     flex-direction: column;        /* put text above image */
     align-items: center;
     text-align: center;
+    padding: 2vh 2vw;
+  }
+   .pic {
+    margin: 0 auto 2rem;        /* center the picture and add space below */
+  }
+
+  .pic img {
+    width: 60vw;                /* scale image down for mobile */
+    height: auto;               /* keep aspect ratio */
+    margin: 0 auto;
+  }
+
+  .summary h1 {
+    white-space: normal;        /* allow wrapping so it never spills out */
+    width: auto;                /* let text use available width */
+    border-right: none;         /* remove the “cursor” on small screens */
+    animation: none;            /* stop typing effect to avoid overflow */
   }
 
   .links {
@@ -239,10 +256,20 @@ footer {
 /* Phones: vertical menu + single-column projects/contacts */
 @media (max-width: 480px) {
 
+  #control {
+    flex-direction: row;      /* force horizontal bar */
+    justify-content: center;  /* center the links inside */
+    padding: 2vh 2vw;
+  }
+
+
   .links {
     flex-direction: column;        /* stack menu links vertically */
-    align-items: center;
-    gap: 0.5rem;
+    gap: 8vw;
+  }
+
+  .links li{
+  display: inline-block; 
   }
 
   .projects {
