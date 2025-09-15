@@ -18,6 +18,28 @@ body {
     color: #e2e8f0;
     line-height: 1.6;
 }
+.nav-left {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #22c55e;
+  margin-right: auto;
+  padding-left: 2vw;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #e2e8f0;
+  padding-right: 2vw;
+}
+
 
 #control {
   width: 100%;
@@ -156,6 +178,55 @@ margin-top: 5vw;
   color: #e2e8f0;
 }
 
+.skills-section {
+  padding: 5vh 2vw;
+  background-color: rgba(15, 23, 42, 0.85);
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 3vw;
+  margin-top: 3vh;
+  justify-items: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 2vh;
+  border-radius: 1vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #22c55e;
+}
+
+.skill-logo {
+  width: 40px;
+  height: auto;
+  margin-bottom: 1vh;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-logo {
+  transform: scale(1.1);
+}
+
+.skill-item span {
+  color: #e2e8f0;
+  font-family: 'Consolas', monospace;
+  font-size: 1rem;
+}
+
+
 .projects{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -272,6 +343,23 @@ footer {
     gap: 1rem;                     /* smaller space between menu links */
     flex-wrap: wrap;               /* allow wrapping if needed */
     justify-content: center;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    right: 2vw;
+    background-color: rgba(15, 23, 42, 0.95);
+    padding: 2vh;
+    border-radius: 1vh;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+    z-index: 999;
+  }
+   .links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
 
@@ -324,6 +412,9 @@ footer {
     max-width: 320px;
   }
 }
+
+
+
 
 
 
