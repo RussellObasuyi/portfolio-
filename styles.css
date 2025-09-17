@@ -1,3 +1,4 @@
+/* ---------- Global Reset ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +6,14 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html, body {
-  margin: 0;
-  padding: 0;
   width: 100%;
-  overflow-x: hidden;/* hides any accidental horizontal scroll */
+  overflow-x: hidden;
+  background-color: #0a0f1c;
+  color: #e2e8f0;
+  line-height: 1.6;
 }
 
-
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #0a0f1c;
-    color: #e2e8f0;
-    line-height: 1.6;
-}
+/* ---------- Navigation ---------- */
 .nav-left {
   font-size: 1.2rem;
   font-weight: bold;
@@ -25,13 +21,11 @@ body {
   margin-right: auto;
   padding-left: 2vw;
 }
-
 nav {
   display: flex;
   align-items: center;
   gap: 2vw;
 }
-
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -39,8 +33,6 @@ nav {
   color: #e2e8f0;
   padding-right: 2vw;
 }
-
-
 #control {
   width: 100%;
   display: flex;
@@ -50,15 +42,14 @@ nav {
   top: 0;
   z-index: 9999;
   padding: 5vh;
-  background: rgba(15, 23, 42, 0.7); /* semi-transparent */
-  backdrop-filter: blur(2vh); /* blur behind */
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(2vh);
   border-bottom: 0.2vh solid rgba(255, 255, 255, 0.1);
 }
-
 .links {
   display: flex;
   justify-content: center;
-  list-style: none; /* removes bullet points*/
+  list-style: none;
   gap: 5vw;
 }
 .links li {
@@ -75,48 +66,45 @@ nav {
 }
 .links a:hover {
   color: #22c55e;
-  text-shadow: 0 0 150px #22c55e, 0 0 8px #22c55e; /* fpr glow effect*/
-}
-#info span {
-  color: #22c55e;
+  text-shadow: 0 0 150px #22c55e, 0 0 8px #22c55e; /* for glow effect */
 }
 
+/* ---------- Hero Section ---------- */
 #info {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   padding-bottom: 2vh;
-  
+}
+#info span {
+  color: #22c55e;
 }
 .pic {
-  flex: 1; /* takes the right half*/
+  flex: 1;
   position: relative;
 }
 .pic img {
-width:35vw ;
-height: 60vh;
-border-radius: 50%;
-object-fit: cover;
-object-position: top center; /* focus on the top and center of the picture*/
-box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* subtle glow */
-margin-left:20vw;
-margin-top: 5vw;
-
+  width: 35vw;
+  height: 60vh;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin-left: 20vw;
+  margin-top: 5vw;
 }
-
 .summary {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
-  opacity: 0; /* start hidden */
-  transform: translateY(20vw); /* slight slide-up */
+  opacity: 0;
+  transform: translateY(20vw);
   animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.3s; /* delay so it feels smooth */
+  animation-delay: 0.3s;
 }
-
-  @keyframes fadeInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20vw);
@@ -126,49 +114,44 @@ margin-top: 5vw;
     transform: translateY(0);
   }
 }
-  
-
-
-.summary h1{
+.summary h1 {
   white-space: nowrap;
   display: flex;
   justify-content: center;
   margin-top: 20vh;
-  overflow: hidden;          /* ensures hidden part doesn’t show */
-  border-right: 2px solid #22c55e; /* blinking cursor effect */
+  overflow: hidden;
+  border-right: 2px solid #22c55e;
   width: 0;
   animation: typing 2.5s steps(20, end) forwards, blink 0.7s step-end infinite;
 }
-@keyframes typing{
-  from {width: 0}
-  to {width: 100%}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
-@keyframes blink{
-  50%{ border-color: transparent}
+@keyframes blink {
+  50% { border-color: transparent; }
 }
-.summary p{
+.summary p {
   display: flex;
   justify-content: center;
-  
 }
-.middle{
+
+/* ---------- About Section ---------- */
+.middle {
   width: 100%;
-  height: auto;
-  padding: 3vh 2vw;           /* better than fixed height */
+  padding: 3vh 2vw;
   text-align: center;
   margin: 0 auto;
   background-color: rgba(15, 23, 42, 0.85);
   margin-top: 40vh;
- }
-
-
-
- .title{
-  color: #22c55e;
-  margin-bottom:1vh;
-  text-shadow: 0 0 1vh #22c55e ;
 }
-.About p{
+.title {
+  color: #22c55e;
+  margin-bottom: 1vh;
+  text-shadow: 0 0 1vh #22c55e;
+  text-align: center;
+}
+.About p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,13 +161,13 @@ margin-top: 5vw;
   color: #e2e8f0;
 }
 
+/* ---------- Skills Section ---------- */
 .skills-section {
   padding: 5vh 2vw;
   background-color: rgba(15, 23, 42, 0.85);
   margin-top: 10vh;
   text-align: center;
 }
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -192,7 +175,6 @@ margin-top: 5vw;
   margin-top: 3vh;
   justify-items: center;
 }
-
 .skill-item {
   display: flex;
   flex-direction: column;
@@ -203,218 +185,180 @@ margin-top: 5vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .skill-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 12px #22c55e;
 }
-
 .skill-logo {
   width: 40px;
   height: auto;
   margin-bottom: 1vh;
   transition: transform 0.3s ease;
 }
-
-.skill-item:hover .skill-logo {
-  transform: scale(1.1);
+.skill-logo:hover {
+  animation: pulse 0.6s ease-in-out;
 }
-
 .skill-item span {
   color: #e2e8f0;
   font-family: 'Consolas', monospace;
   font-size: 1rem;
 }
 
-
-.projects{
+/* ---------- Projects Section ---------- */
+.projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 4vw; /* space between boxes */
+  gap: 4vw;
   margin-top: 5vh;
-
 }
-.projname{
-  
-   height:auto ;
-   background-color: #1e293b;
-   border-radius: 2vw;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-   text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+.project-card {
+  background-color: #1e293b;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardFade 0.8s ease forwards;
 }
-#pro{
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #22c55e;
+}
+.project-card h3 {
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.tech-used {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.description {
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+#pro {
   margin-top: 16vh;
 }
 
-.projname:hover{
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 15px rgba(34, 197, 94, 0.2);
-}
-/* ---------- Contact Section Links ---------- */
+/* ---------- Contact Section ---------- */
 .contact-section a {
   margin-top: 5vh;
-  color: #0613cf;            /* base light-gray text */
-  text-decoration: none;     /* remove default underline */
-  font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #0613cf;
+  text-decoration: none;
+  font-weight: 500
+}
+/* ---------- Animations ---------- */
+
+/* Fade-slide for scroll-triggered entry */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-slide.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Hover effect: neon-green glow */
-.contact-section a:hover {
-  color: #22c55e;
-  text-shadow: 0 0 12px #22c55e, 0 0 20px #22c55e;
+/* Pulse effect for skill logos */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
+.skill-logo:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Fade-in for name span */
+.name {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Staggered project card entry */
+.project-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardFade 0.8s ease forwards;
+}
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#contacts {
+  margin-top: 8vh;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 5vh 2vw;
+}
+
+.contact-section p {
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2vh;
+}
+
 .contact-card {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 10px 18px;
   margin: 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(34,197,94,0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-card:hover {
-  background: rgba(34,197,94,0.1);
+  background: rgba(34, 197, 94, 0.1);
   transform: translateY(-3px);
   box-shadow: 0 0 12px #22c55e;
-  color: #22c55e; 
+  color: #22c55e;
 }
 
 .contact-card i {
   font-size: 1.2rem;
 }
-#contacts{
-  margin-top: 8vh;
-}
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0a0f1c;
-    color: #4c8ae0;
-    margin-left:0;
-    width: 100%;
-    box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  background-color: #0a0f1c;
+  color: #4c8ae0;
+  margin-left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
-/* ------------------ Responsive tweaks only ------------------ */
-
-/* Tablets: stack hero text & image, tighten nav gap */
-@media (max-width: 768px) {
-
-  #info {
-    flex-direction: row;        /* put text above image */
-    align-items: center;
-    text-align: center;
-    padding: 2vh 2vw;
-    gap: 2rem;
-  }
-   .pic {
-    margin: 0 auto 2rem;        /* center the picture and add space below */
-  }
-
-  .pic img {
-    width: 35vw;                /* scale image down for mobile */
-    height: auto;               /* keep aspect ratio */
-    margin: 0 auto;
-  }
-  
-  #info .summary{
-    text-align: left;
-  }
-
-  .summary h1 {
-    font-size: 1rem;
-    line-height: 1.4;
-    white-space: normal;        /* allow wrapping so it never spills out */
-    width: auto;                /* let text use available width */
-    border-right: none;         /* remove the “cursor” on small screens */
-            /* stop typing effect to avoid overflow */
-  }
-  
-  .summary p{
-    font-size: 0.7rem;
-
-  }
-    .links {
-    display: none;
-    flex-direction: column;
-    background-color: #1e293b;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-
-   .links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size:1.5rem;
-    column-rule-color: #22c55e;
-  }
-}
-
-/* Phones: vertical menu + single-column projects/contacts */
-@media (max-width: 480px) {
-
-  #control {
-    flex-direction: row;      /* force horizontal bar */
-    justify-content: center;  /* center the links inside */
-    padding: 2vh 2vw;
-  }
-    .summary h1 {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    white-space: normal;        /* allow wrapping so it never spills out */
-    width: auto;                /* let text use available width */
-    border-right: none;         /* remove the “cursor” on small screens */
-            /* stop typing effect to avoid overflow */
-  }
-
-  .summary p{
-    font-size: 0.5rem;
-
-  }
-
-
-  .links {        
-    gap: 8vw;
-  }
-
-  .links li{
-  display: inline-block; 
-  }
-
-  .projects {
-    display: grid;
-    grid-template-columns: 1fr;    /* single column */
-    gap: 1.5rem;
-  }
-
-  .contact-cards {
-    display: grid;
-    grid-template-columns: 1fr;    /* single column */
-    gap: 1.5rem;
-    justify-items: center;         /* center the cards */
-  }
-
-  .contact-card {
-    width: 90%;                    /* make cards fit phone width */
-    max-width: 320px;
-  }
-}
-
-
-
-
-
-
-

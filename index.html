@@ -1,147 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Obasuyi Russell Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obasuyi Russell Portfolio</title>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/7dbfea51a8.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7dbfea51a8.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- JavaScript -->
-  <script src="script.js" defer></script>
-</head>
-<body>
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header id="control">
+      <div class="nav-left">Obasuyi Russell</div>
+      <nav>
+        <div class="hamburger" aria-label="Toggle navigation">&#9776;</div>
+        <ul class="links">
+          <li><a href="#About">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  
-  <header id="control">
-    <div class="nav-left">Obasuyi Russell</div>
-    <nav>
-      <div class="hamburger" aria-label="Toggle navigation">&#9776;</div>
-      <ul class="links">
-        <li><a href="#About">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contacts">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  
-  <div id="info">
-    <div class="summary">
-      <h1>Hi there, I'm &nbsp;<span class="name">Obasuyi Russell</span></h1>
-      <p>Tech Enthusiast | Web developer | Problem Solver</p>
+    <div id="info">
+      <div class="summary fade-slide">
+        <h1>Hi there, I'm &nbsp;<span class="name">Obasuyi Russell</span></h1>
+        <p>Tech Enthusiast | Web developer | Problem Solver</p>
+      </div>
+      <div class="pic fade-slide">
+        <img src="images/profile.jpg" alt="Profile" />
+      </div>
     </div>
-    <div class="pic">
-      <img src="images/profile.jpg" alt="Profile" />
-    </div>
-  </div>
 
-  
-  <section id="About" class="middle">
-    <div class="About">
-      <h2 class="title">ABOUT</h2>
+    <section id="About" class="middle fade-slide">
+      <div class="About">
+        <h2 class="title">ABOUT</h2>
+        <p>
+          I’m a third-year Software Engineering student driven by curiosity and
+          creativity. I enjoy diving into new technologies and expanding my
+          skills every day. My toolkit includes HTML, CSS, Python, C++, and
+          Rust, with hands-on experience in web development. I frequently
+          incorporate AI into my projects—not by engineering models, but by
+          using intelligent tools to enhance creativity, automate tasks, and
+          build smarter user experiences. AI also plays a key role in how I
+          learn and grow technically, helping me explore new ideas, solve
+          problems faster, and push the boundaries of what I can build. Lately,
+          I’ve been exploring game development and diving deeper into CRUD
+          systems. I’m passionate about crafting software that’s not only
+          efficient but also innovative and fun to build! 🚀
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section fade-slide">
+      <h2 class="title">SKILLS</h2>
+      <div class="skills-grid">
+        <div class="skill-item fade-slide">
+          <img src="images/python.svg" alt="Python Logo" class="skill-logo" />
+          <span>Python</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/git.svg" alt="git Logo" class="skill-logo" />
+          <span>Git</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/rust.svg" alt="Rust Logo" class="skill-logo" />
+          <span>Rust</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/cpp.svg" alt="C++ Logo" class="skill-logo" />
+          <span>C++</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/html5.svg" alt="HTML Logo" class="skill-logo" />
+          <span>HTML</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/css.svg" alt="CSS Logo" class="skill-logo" />
+          <span>CSS</span>
+        </div>
+        <div class="skill-item fade-slide">
+          <img src="images/sqlite.svg" alt="sql Logo" class="skill-logo" />
+          <span>SQLite</span>
+        </div>
+      </div>
+    </section>
+
+    <h2 id="pro" class="title fade-slide">PROJECTS</h2>
+    <div id="projects" class="projects">
+      <div class="project-card fade-slide">
+        <h3>📊 Risk Scoring Model</h3>
+        <p class="tech-used">Python · Pandas · Data Analysis</p>
+        <p class="description">
+          Built a model to assess transaction risk using statistical methods and pattern recognition.
+        </p>
+      </div>
+
+      <div class="project-card fade-slide">
+        <h3>📝 To-Do List (Business Central)</h3>
+        <p class="tech-used">AL · Microsoft Dynamics 365 BC</p>
+        <p class="description">
+          Created a custom task manager in Business Central with features for adding, viewing, and linking tasks across pages.
+        </p>
+      </div>
+
+      <div class="project-card fade-slide">
+        <h3>🌐 Portfolio Website</h3>
+        <p class="tech-used">HTML · CSS · JavaScript</p>
+        <p class="description">
+          Designed and built a personal portfolio with a dark-themed, tech-inspired UI focused on readability and structure.
+        </p>
+      </div>
+
+      <div class="project-card fade-slide">
+        <h3>🧮 GPA Calculator</h3>
+        <p class="tech-used">Rust · CLI Utility</p>
+        <p class="description">
+          Developed a command-line GPA calculator that computes semester GPAs based on course inputs, grades, and credit units.
+        </p>
+      </div>
+    </div>
+
+    <section id="contacts" class="contact-section fade-slide">
+      <h2 class="title">CONTACT</h2>
       <p>
-        I’m a third-year Software Engineering student driven by curiosity and creativity.
-        I enjoy diving into new technologies and expanding my skills every day.
-        My toolkit includes HTML, CSS, Python, C++, and Rust, with hands-on experience in web development.
-        Lately, I’ve been exploring game development and diving deeper into CRUD systems.
-        I’m passionate about crafting software that’s not only efficient but also innovative and fun to build! 🚀
+        I'd love to hear from you! Feel free to reach out via any of the
+        platforms below:
       </p>
-    </div>
-  </section>
-
-
-  <section id="skills" class="skills-section">
-    <h2 class="title">SKILLS</h2>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <img src="images/python.svg" alt="Python Logo" class="skill-logo" />
-        <span>Python</span>
+      <div class="contact-cards">
+        <a
+          href="mailto:russellobasuyi1@gmail.com"
+          target="_blank"
+          class="contact-card fade-slide"
+        >
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/russell-obasuyi/"
+          target="_blank"
+          class="contact-card fade-slide"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a
+          href="https://github.com/RussellObasuyi"
+          target="_blank"
+          class="contact-card fade-slide"
+        >
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
       </div>
-      <div class="skill-item">
-        <img src="images/anaconda.svg" alt="Anaconda Logo" class="skill-logo" />
-        <span>Anaconda</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/rust.svg" alt="Rust Logo" class="skill-logo" />
-        <span>Rust</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/cpp.svg" alt="C++ Logo" class="skill-logo" />
-        <span>C++</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/html5.svg" alt="HTML Logo" class="skill-logo" />
-        <span>HTML</span>
-      </div>
-      <div class="skill-item">
-        <img src="images/css.svg" alt="CSS Logo" class="skill-logo" />
-        <span>CSS</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  
-  <h2 id="pro" class="title">PROJECTS</h2>
-  <div id="projects" class="projects">
-    <div class="projname">
-      <h3>Risk Scoring Model</h3>
-      <p>
-        Used Python and Pandas to build a risk scoring model using transactions,
-        demonstrating data analysis and risk management.
-      </p>
-    </div>
-    <div class="projname">
-      <h3>To-Do List</h3>
-      <p>
-        Developed a custom To-Do List in Microsoft Dynamics 365 Business Central using AL,
-        with features for adding tasks, viewing them in a list page, and linking to a card page.
-      </p>
-    </div>
-    <div class="projname">
-      <h3>Portfolio Website</h3>
-      <p>
-        Designed and built a personal web portfolio with a dark-themed, tech-inspired UI.
-        Built with HTML, CSS, and JavaScript focused on readability and structure.
-      </p>
-    </div>
-    <div class="projname">
-      <h3>GPA Calculator</h3>
-      <p>
-        Built a command-line GPA calculator in Rust, allowing students to input courses,
-        grades, and credit units to compute semester GPAs.
-      </p>
-    </div>
-  </div>
-
-  
-  <section id="contacts" class="contact-section">
-    <h2 class="title">CONTACT</h2>
-    <p>I'd love to hear from you! Feel free to reach out via any of the platforms below:</p>
-    <div class="contact-cards">
-      <a href="mailto:russellobasuyi1@gmail.com" target="_blank" class="contact-card">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
-      </a>
-      <a href="https://www.linkedin.com/in/russell-obasuyi/" target="_blank" class="contact-card">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/RussellObasuyi" target="_blank" class="contact-card">
-        <i class="fa-brands fa-github"></i>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </section>
-
-  
-  <footer>
-    <p>© 2025 Obasuyi Russell | All Rights Reserved</p>
-  </footer>
-
-</body>
+    <footer class="fade-slide">
+      <p>© 2025 Obasuyi Russell | All Rights Reserved</p>
+    </footer>
+  </body>
 </html>

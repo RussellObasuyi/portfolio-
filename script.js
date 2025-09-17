@@ -1,33 +1,31 @@
-// 🔹 Smooth Scroll Navigation
-// When a nav link is clicked, scroll smoothly to the target section
-document.querySelectorAll('.links a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent default jump
-
-    const targetId = this.getAttribute('href').substring(1); // Get section ID
-    const targetSection = document.getElementById(targetId); // Find section
-
-    targetSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
-
-    // Optional: Close mobile menu after clicking a link
-    document.querySelector('.links').classList.remove('active');
-  });
-});
-
-// 🔹 Hamburger Menu Toggle
-// Show/hide nav links when hamburger icon is clicked
+// =======================
+// Hamburger Menu Toggle
+// =======================
 const hamburger = document.querySelector('.hamburger');
-const links = document.querySelector('.links');
+const navLinks = document.querySelector('.links');
 
 hamburger.addEventListener('click', () => {
-  links.classList.toggle('active'); // Toggle visibility
+  navLinks.classList.toggle('active');
 });
 
-// 🔹 Accessibility: Allow keyboard toggle with Enter key
-hamburger.setAttribute("tabindex", "0"); // Make hamburger focusable
 
-hamburger.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    links.classList.toggle("active"); // Toggle on Enter key
-  }
+// =======================
+// Scroll-triggered Animations
+// =======================
+
+// Select all elements with the fade-slide class
+const faders = document.querySelectorAll('.fade-slide');
+
+// Create an IntersectionObserver to detect when elements enter the viewport
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1 // Trigger when 10% of the element is visible
 });
+
+// Observe each fade-slide element
+faders.forEach(el => appearOnScroll.observe(el));
